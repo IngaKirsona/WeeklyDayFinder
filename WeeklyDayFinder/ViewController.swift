@@ -29,7 +29,7 @@ func handleCalculation(){
         let calendar = Calendar.current
         var dateComponent = DateComponents()
     
-    guard let day = dayTextField.text, let month = monthTextField.text, let year = yearTextField.text
+    guard let day = dayTextField.text, day.count < 3, let month = monthTextField.text,  month.count < 3, let year = yearTextField.text
             else {
             print ("textField error")
             return
@@ -38,6 +38,10 @@ func handleCalculation(){
         dateComponent.day = Int(day)
         dateComponent.month = Int(month)
         dateComponent.year = Int(year)
+    if day.count < 3 && month.count <= 2{
+        
+        
+    }
         
         guard let date = calendar.date(from: dateComponent)
             else {
@@ -52,6 +56,7 @@ func handleCalculation(){
         let weekday = dateFormatter.string(from: date)
         resultLabel.text = weekday
     }
+    
 @IBAction func findWeekDayTapped(_ sender: Any) {
         handleCalculation()
     }
