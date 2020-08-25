@@ -57,17 +57,26 @@
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Calendar Day" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="F2g-J3-c8o">
                                                         <rect key="frame" x="0.0" y="0.0" width="131.5" height="34"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                        <textInputTraits key="textInputTraits"/>
+                                                        <textInputTraits key="textInputTraits" keyboardType="numberPad" keyboardAppearance="alert"/>
+                                                        <connections>
+                                                            <outlet property="delegate" destination="BYZ-38-t0r" id="0W0-YZ-qV9"/>
+                                                        </connections>
                                                     </textField>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Calendar Month" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dNf-oa-tCf">
                                                         <rect key="frame" x="0.0" y="52" width="131.5" height="34"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                        <textInputTraits key="textInputTraits"/>
+                                                        <textInputTraits key="textInputTraits" keyboardType="numberPad" keyboardAppearance="alert"/>
+                                                        <connections>
+                                                            <outlet property="delegate" destination="BYZ-38-t0r" id="6q3-FH-Zmz"/>
+                                                        </connections>
                                                     </textField>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Calendar Year" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9XT-Nd-GZb">
                                                         <rect key="frame" x="0.0" y="104" width="131.5" height="34"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                        <textInputTraits key="textInputTraits"/>
+                                                        <textInputTraits key="textInputTraits" keyboardType="numberPad" keyboardAppearance="alert"/>
+                                                        <connections>
+                                                            <outlet property="delegate" destination="BYZ-38-t0r" id="o93-QL-uwo"/>
+                                                        </connections>
                                                     </textField>
                                                 </subviews>
                                             </stackView>
@@ -76,7 +85,7 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="EIt-9g-43p">
                                         <rect key="frame" x="0.0" y="184" width="278" height="95"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Day of the week:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pgE-mb-DhJ">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Day of the week:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pgE-mb-DhJ">
                                                 <rect key="frame" x="0.0" y="0.0" width="278" height="56"/>
                                                 <color key="backgroundColor" systemColor="secondaryLabelColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
@@ -101,19 +110,22 @@
                                                 <state key="normal" title="Find">
                                                     <color key="titleColor" red="0.44681930539999998" green="0.27910444140000001" blue="0.22350817919999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="findWeekDayTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0b4-sM-tcf"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
                                 </subviews>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Check Your Date" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cb3-xI-IpQ">
-                                <rect key="frame" x="21" y="20" width="269.5" height="35"/>
-                                <color key="backgroundColor" systemColor="secondaryLabelColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+                                <rect key="frame" x="21" y="20" width="274" height="35"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="35" id="hVt-zs-nXf"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Baskerville-Bold" family="Baskerville" pointSize="34"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="textColor" red="0.33333677049999999" green="0.33332890269999998" blue="0.33333045239999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -122,17 +134,26 @@
                             <constraint firstItem="M3Y-1p-MMg" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="0Oj-nh-lBO"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Zog-qi-Goh" secondAttribute="trailing" id="1Vd-LO-UkR"/>
                             <constraint firstItem="cb3-xI-IpQ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="59f-CP-TvZ"/>
+                            <constraint firstItem="M3Y-1p-MMg" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="21" id="6D7-Gh-d3m"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="cb3-xI-IpQ" secondAttribute="trailing" symbolic="YES" id="9yr-cr-v4q"/>
                             <constraint firstItem="Zog-qi-Goh" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="H6c-If-hju"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="M3Y-1p-MMg" secondAttribute="trailing" constant="21" id="RGU-Va-Xe0"/>
                             <constraint firstItem="Zog-qi-Goh" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="-93" id="ZJn-R0-rgf"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Zog-qi-Goh" secondAttribute="bottom" id="b0h-DO-0y2"/>
                             <constraint firstItem="cb3-xI-IpQ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="5" id="gHU-kj-Obw"/>
                             <constraint firstItem="M3Y-1p-MMg" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ioM-G4-Uxc"/>
                             <constraint firstItem="F2g-J3-c8o" firstAttribute="top" relation="greaterThanOrEqual" secondItem="cb3-xI-IpQ" secondAttribute="bottom" constant="44" id="lSO-Ct-szd"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="cb3-xI-IpQ" secondAttribute="trailing" constant="25" id="oxG-BG-nhl"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" title="Day Finder" id="vYo-vM-2Oh"/>
+                    <connections>
+                        <outlet property="dayTextField" destination="F2g-J3-c8o" id="Rym-9L-kmh"/>
+                        <outlet property="monthTextFoeld" destination="dNf-oa-tCf" id="JaM-CO-Uyu"/>
+                        <outlet property="resultLabel" destination="pgE-mb-DhJ" id="NUz-Qh-Hdz"/>
+                        <outlet property="yearTextField" destination="9XT-Nd-GZb" id="s3c-WZ-ZHJ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
