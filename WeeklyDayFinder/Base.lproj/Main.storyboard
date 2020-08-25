@@ -150,7 +150,7 @@
                     <navigationItem key="navigationItem" title="Day Finder" id="vYo-vM-2Oh"/>
                     <connections>
                         <outlet property="dayTextField" destination="F2g-J3-c8o" id="Rym-9L-kmh"/>
-                        <outlet property="monthTextFoeld" destination="dNf-oa-tCf" id="JaM-CO-Uyu"/>
+                        <outlet property="monthTextField" destination="dNf-oa-tCf" id="JaM-CO-Uyu"/>
                         <outlet property="resultLabel" destination="pgE-mb-DhJ" id="NUz-Qh-Hdz"/>
                         <outlet property="yearTextField" destination="9XT-Nd-GZb" id="s3c-WZ-ZHJ"/>
                     </connections>
