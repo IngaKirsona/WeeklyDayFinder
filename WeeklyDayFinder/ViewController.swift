@@ -29,23 +29,23 @@ func handleCalculation(){
         let calendar = Calendar.current
         var dateComponent = DateComponents()
     
-    guard let day = dayTextField.text, day.count < 3, let month = monthTextField.text,  month.count < 3, let year = yearTextField.text
+    
+    guard let day = dayTextField.text, Int(day) ?? 0 <= 31, let month = monthTextField.text, Int(month) ?? 0 <= 12, let year = yearTextField.text
             else {
             print ("textField error")
+            self.resultLabel.text = "Input error!"
             return
         }
     
         dateComponent.day = Int(day)
         dateComponent.month = Int(month)
         dateComponent.year = Int(year)
-    if day.count < 3 && month.count <= 2{
+    
         
-        
-    }
-        
-        guard let date = calendar.date(from: dateComponent)
+    guard let date = calendar.date(from: dateComponent)
             else {
             print ("calendar.date error")
+            self.resultLabel.text = "Input error!"
             return
         }
     
@@ -63,4 +63,3 @@ func handleCalculation(){
    
 }
     
-
