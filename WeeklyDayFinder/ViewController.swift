@@ -30,7 +30,7 @@ func handleCalculation(){
         var dateComponent = DateComponents()
     
     
-    guard let day = dayTextField.text, Int(day) ?? 0 <= 31, let month = monthTextField.text, Int(month) ?? 0 <= 12, let year = yearTextField.text
+    guard let day = dayTextField.text, !day.isEmpty, Int(day) ?? 0 <= 31, let month = monthTextField.text, !month.isEmpty, Int(month) ?? 0 <= 12, let year = yearTextField.text, !year.isEmpty
             else {
             print ("textField error")
             self.resultLabel.text = "Input error!"
