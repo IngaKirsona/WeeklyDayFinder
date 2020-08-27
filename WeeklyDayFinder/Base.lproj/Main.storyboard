@@ -54,7 +54,7 @@
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="18" translatesAutoresizingMaskIntoConstraints="NO" id="5Gc-gH-3dz">
                                                 <rect key="frame" x="120.5" y="0.0" width="131.5" height="138"/>
                                                 <subviews>
-                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Calendar Day" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="F2g-J3-c8o">
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Calendar Day" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="F2g-J3-c8o">
                                                         <rect key="frame" x="0.0" y="0.0" width="131.5" height="34"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits" keyboardType="numberPad" keyboardAppearance="alert"/>
@@ -62,7 +62,7 @@
                                                             <outlet property="delegate" destination="BYZ-38-t0r" id="0W0-YZ-qV9"/>
                                                         </connections>
                                                     </textField>
-                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Calendar Month" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dNf-oa-tCf">
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Calendar Month" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="dNf-oa-tCf">
                                                         <rect key="frame" x="0.0" y="52" width="131.5" height="34"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits" keyboardType="numberPad" keyboardAppearance="alert"/>
@@ -70,7 +70,7 @@
                                                             <outlet property="delegate" destination="BYZ-38-t0r" id="6q3-FH-Zmz"/>
                                                         </connections>
                                                     </textField>
-                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Calendar Year" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9XT-Nd-GZb">
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Calendar Year" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="9XT-Nd-GZb">
                                                         <rect key="frame" x="0.0" y="104" width="131.5" height="34"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits" keyboardType="numberPad" keyboardAppearance="alert"/>
@@ -150,6 +150,7 @@
                     <navigationItem key="navigationItem" title="Day Finder" id="vYo-vM-2Oh"/>
                     <connections>
                         <outlet property="dayTextField" destination="F2g-J3-c8o" id="Rym-9L-kmh"/>
+                        <outlet property="findButton" destination="rA7-Du-nXq" id="53H-XG-vnM"/>
                         <outlet property="monthTextField" destination="dNf-oa-tCf" id="JaM-CO-Uyu"/>
                         <outlet property="resultLabel" destination="pgE-mb-DhJ" id="NUz-Qh-Hdz"/>
                         <outlet property="yearTextField" destination="9XT-Nd-GZb" id="s3c-WZ-ZHJ"/>
@@ -184,7 +185,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vdF-cB-2x3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-334" y="-294"/>
+            <point key="canvasLocation" x="-559" y="-296"/>
         </scene>
     </scenes>
     <resources>
