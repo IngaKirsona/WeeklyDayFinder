@@ -9,22 +9,27 @@
 import UIKit
 
 class InfoViewController: UIViewController {
+    
 
+    @IBOutlet weak var appDescLabel: UILabel!
+    @IBOutlet weak var appInfoLabel: UILabel!
+    
+    var infoText = String()
+    let appDescText = "This app is a homework project.\n Which day of the day is your day?\nCheck Dark/Light Mode."
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        appDescLabel.text = appDescText
+        
+        if !infoText.isEmpty{
+            appInfoLabel.text = infoText
+        }
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func closeButtonTapped(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+        print("dismiss View Controller")
     }
-    */
-
+    
 }

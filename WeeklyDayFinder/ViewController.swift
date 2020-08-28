@@ -91,6 +91,20 @@ func handleCalculation(){
 @IBAction func findWeekDayTapped(_ sender: Any) {
         handleCalculation()
     }
-   
+
+   // MARK: - Navigation
+
+   // In a storyboard-based application, you will often want to do a little preparation before navigation
+   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    if segue.identifier == "infoSegue"{
+       // Get the new view controller using segue.destination.
+        let vc = segue.destination as! InfoViewController
+       // Pass the selected object to the new view controller.
+        vc.infoText = "DayFinder helps you to find\n your weekday for given date."
+   }
+
+
+    
 }
     
+}
