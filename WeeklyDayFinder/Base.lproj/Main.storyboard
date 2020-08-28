@@ -154,13 +154,13 @@
                     </view>
                     <navigationItem key="navigationItem" title="Day Finder" id="vYo-vM-2Oh">
                         <barButtonItem key="leftBarButtonItem" title="Item" image="info.circle.fill" catalog="system" id="6bv-wN-wGx">
-                            <color key="tintColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                            <color key="tintColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                             <connections>
-                                <segue destination="WKb-Rp-rAg" kind="presentation" identifier="InfoSegue" id="Xhv-YP-37m"/>
+                                <segue destination="WKb-Rp-rAg" kind="presentation" identifier="infoSegue" id="Xhv-YP-37m"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Item" image="moon.circle.fill" catalog="system" id="o3l-xa-xoi">
-                            <color key="tintColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                            <color key="tintColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                             <connections>
                                 <segue destination="4Cn-8T-jDE" kind="show" id="QvS-u4-ozY"/>
                             </connections>
@@ -197,15 +197,17 @@
                                     <action selector="closeButtonTapped:" destination="WKb-Rp-rAg" eventType="touchUpInside" id="mca-te-YI8"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="App Description" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fwm-yq-M7V">
-                                <rect key="frame" x="61" y="488" width="198" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="App Desc" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fwm-yq-M7V">
+                                <rect key="frame" x="61" y="488.5" width="198" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="App Info" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ffu-AI-shr">
-                                <rect key="frame" x="61" y="245" width="198" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="App Info" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ffu-AI-shr">
+                                <rect key="frame" x="51" y="244" width="218" height="75"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="75" id="avL-Rd-sd3"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -213,10 +215,13 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="ffu-AI-shr" firstAttribute="centerX" secondItem="fwm-yq-M7V" secondAttribute="centerX" id="2Db-XK-jcb"/>
                             <constraint firstItem="vHU-AI-Fkt" firstAttribute="trailing" secondItem="fwm-yq-M7V" secondAttribute="trailing" constant="61" id="9MF-6W-seP"/>
                             <constraint firstItem="fqB-wy-HP2" firstAttribute="top" secondItem="vHU-AI-Fkt" secondAttribute="top" constant="24" id="BLc-74-Qdk"/>
                             <constraint firstItem="vHU-AI-Fkt" firstAttribute="trailing" secondItem="fqB-wy-HP2" secondAttribute="trailing" constant="29" id="CeB-XU-WdM"/>
+                            <constraint firstItem="ffu-AI-shr" firstAttribute="top" secondItem="kgz-YL-wB9" secondAttribute="top" constant="244" id="eoh-Ee-eSP"/>
                             <constraint firstItem="vHU-AI-Fkt" firstAttribute="bottom" secondItem="fwm-yq-M7V" secondAttribute="bottom" constant="39" id="jja-IQ-yhZ"/>
+                            <constraint firstItem="ffu-AI-shr" firstAttribute="leading" secondItem="vHU-AI-Fkt" secondAttribute="leading" constant="51" id="p1Z-4c-mWl"/>
                             <constraint firstItem="fwm-yq-M7V" firstAttribute="leading" secondItem="vHU-AI-Fkt" secondAttribute="leading" constant="61" id="v26-z1-VBO"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="vHU-AI-Fkt"/>

@@ -14,14 +14,14 @@ class AppearenceViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        setLabelText()
     }
     @IBAction func openSettingsTapped(_ sender: Any) {
-        guard let SettingsURL = URL(string: UIApplication.openSettingsURLString) else{
+        guard let settingsURL = URL(string: UIApplication.openSettingsURLString) else{
             return
         }
-        if UIApplication.shared.canOpenURL(SettingsURL){
-            UIApplication.shared.open(SettingsURL, options: [:]) {(success) in
+        if UIApplication.shared.canOpenURL(settingsURL){
+            UIApplication.shared.open(settingsURL, options: [:]) {(success) in
             print(success)
             }
         }

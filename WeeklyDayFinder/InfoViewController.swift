@@ -15,7 +15,7 @@ class InfoViewController: UIViewController {
     @IBOutlet weak var appInfoLabel: UILabel!
     
     var infoText = String()
-    let appDescText = "This app is a homework project.\n Which day of the day is your day?\nCheck Dark/Light Mode."
+    let appDescText = "This app is a homework project. Which day of the day is your day?\nCheck Dark/Light Mode."
     
     override func viewDidLoad() {
         super.viewDidLoad()
