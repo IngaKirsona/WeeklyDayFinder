@@ -9,7 +9,7 @@
 import UIKit
 
 class AppearenceViewController: UIViewController {
-
+    
     @IBOutlet weak var textLabel: UILabel!
     
     override func viewDidLoad() {
@@ -22,7 +22,7 @@ class AppearenceViewController: UIViewController {
         }
         if UIApplication.shared.canOpenURL(settingsURL){
             UIApplication.shared.open(settingsURL, options: [:]) {(success) in
-            print(success)
+                print(success)
             }
         }
     }

@@ -10,7 +10,7 @@ import UIKit
 
 class InfoViewController: UIViewController {
     
-
+    
     @IBOutlet weak var appDescLabel: UILabel!
     @IBOutlet weak var appInfoLabel: UILabel!
     
@@ -26,7 +26,7 @@ class InfoViewController: UIViewController {
         }
     }
     
-
+    
     @IBAction func closeButtonTapped(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
         print("dismiss View Controller")
